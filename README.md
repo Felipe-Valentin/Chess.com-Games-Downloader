@@ -33,7 +33,7 @@ Caso você esteja tentando baixar partidas de outro jogador, além do padrão (*
 
 - Os jeitos mais fáceis de obter o "nome de membro" de um jogador, são através do link do perfil desse jogador no Chess.com, você deve encontrá-lo após o último separador "/" na URL. Também é visivelmente possível obtê-lo no título maior, ao lado da foto de perfil desse jogador, em cima do nome do proprietário desse perfil.
 
-![Aonde obter o "nome de membro" de um jogador, no Chess.com](https://img001.prntscr.com/file/img001/51mdP9jJQtC77hs2QaOxXQ.png)
+![Aonde obter o "nome de membro" de um jogador, no Chess.com](https://i.imgur.com/A1oeVkT.png)
 
 <br/>
 
@@ -47,7 +47,7 @@ Caso você queira saber como é a formatação das partidas pelo Downloader:
 e4, c5, Nf3, Nc6, d4, cxd4, Nxd4, Nf6, Nc3, e5, Ndb5, d6, Bg5, a6, Na3, b5, Nd5, Be7, Bxf6, Bxf6, c4, b4, Nc2, O-O, g3, a5, Bg2, Bg5, O-O, Be6, Qd3, Qb8, a3, b3, Nce3, Nd4, f4, Bd8, Kh1, f6, Nf5, Bb6, g4, Bc5, g5, fxg5, fxg5, Ra7, Nfe7+, Kh8, Rxf8+, Qxf8, Rf1, Qe8, Nf5, Rf7, Nxd4, Rxf1+, Bxf1, exd4, Nc7, Qf7, Nxe6, Qxe6, Qf3, Kg8, Bd3, Qf7, Kg2, Qg6, h4, Qf7, e5, dxe5, Bxh7+, Kf8, Bg6, Qxf3+, Kxf3, Ke7, Bd3, Ke6, h5, Be7, h6, gxh6, gxh6, Kf7, Ke4, Kg6, c5, Kxh6, c6, Bd8, Kxe5, Kg5, Kxd4, Kf4, Kc5, Ke3, Bc4, Kd2, Bxb3, Kc1, a4, Kxb2, Bc4, Bc7, Bb5, Kc3, Kd5, Kb4, Kd4, Bb6+, Ke5, Bc7+, Ke6, Kc5, Ke7, Kb6, Kd7, Bb8, Kc8, Bc7, Kd7, Bb8, Kd8, Bc7+, Kc8, Bh2, Kd7, Bc7, Ke6, Bh2, Kd5, Bc7, Ke6, Bb8, Kd7, Bc7, Ke6, 1/2-1/2
 ```
 
-![Formatação do nome de partidas baixadas pelo Downloader](https://img001.prntscr.com/file/img001/PAs2qnCRQW6K1PbUqbAiGw.png)
+![Formatação do nome de partidas baixadas pelo Downloader](https://i.imgur.com/opZWc7G.png)
 
 <br/>
 
