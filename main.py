@@ -1,14 +1,30 @@
 from time import sleep
 from os import path, makedirs
 
-from config import settings
-username, initial_year, final_year, initial_month, minimum_accuracy = settings() # Resgata as especificações desejadas
+try:
+    from config import settings
+    username, initial_year, final_year, initial_month, minimum_accuracy = settings() # Resgata as especificações desejadas
+except NameError as e:
+        print('[ERRO] Alguma variável na "config.py", foi declarada sem as aspas.')
+        print(f'\n<DEPURAÇÃO CPython> {e}.')
+        print('\n[NÓ FATAL] Encerrando a execução em 25 segundos...')
+        sleep(25)  # adormece a rotina por 25 segundos
+        exit() # Encerra a execução do programa
+except SyntaxError as e:
+        print('[ERRO] Na "config.py", há algum zero antes dum valor, retire-o.')
+        print(f'\n<DEPURAÇÃO CPython> {e}.')
+        print('\n[NÓ FATAL] Encerrando a execução em 25 segundos...')
+        sleep(25)  # adormece ""
+        exit() # Encerra a execução do programa
+if isinstance(minimum_accuracy, str):
+    minimum_accuracy = float(minimum_accuracy) # Corrige a declaração da variável
 
 year, month = initial_year, initial_month # Define o começo do período de analíse
 
 # Verificar se a pasta de saída não existe:
 if not path.exists("Downloaded Games PGN"):
     makedirs("Downloaded Games PGN") # Cria a pasta de saída de dados
+
 
 from downloader import download
 while True:
@@ -42,7 +58,7 @@ while True:
             year -= 1  # prepara "" o próximo ano do ""
             if year == final_year-1:
                 break # Termina o downloader
-        except Exception as e:
+        except TypeError as e:
             print('\n\n[ERRO] Algum ano foi inserido entre aspas na "config.py", retire-as.')
             print(f'\n<DEPURAÇÃO CPython> {e}.')
             print('\n[NÓ FATAL] Encerrando a execução em 25 segundos...')

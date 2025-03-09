@@ -6,7 +6,7 @@ def download(username, year, month, minimum_accuracy):
 
     try:
         zero = "0" if month < 10 else ""  # arruma a sintaxe do URL, para acessar a API corretamente
-    except Exception as e:
+    except TypeError as e:
         print('[ERRO] O mês inicial foi inserido entre aspas na "config.py", retire-as.')
         print(f'\n<DEPURAÇÃO CPython> {e}.')
         print('\n[NÓ FATAL] Encerrando a execução em 25 segundos...')
@@ -18,7 +18,7 @@ def download(username, year, month, minimum_accuracy):
     try:
         with urllib.request.urlopen(link) as response:
             data = json.loads(response.read().decode()) # Coleta o conteúdo JSON
-    except Exception as e:
+    except urllib.error.HTTPError as e:
         print('[ERRO] Verifique na "config.py" se o nome de membro, e/ou o período entre as\ndatas são válidos ao acessar a API.')
         print(f'\n<DEPURAÇÃO CPython> {e}.')
         print('\n[NÓ FATAL] Encerrando a execução em 40 segundos...')
