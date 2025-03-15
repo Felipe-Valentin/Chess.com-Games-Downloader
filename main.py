@@ -11,13 +11,16 @@ except NameError as e:
         sleep(25)  # adormece a rotina por 25 segundos
         exit() # Encerra a execução do programa
 except SyntaxError as e:
-        print('[ERRO] Na "config.py", há algum zero antes dum valor, retire-o.')
+        print('[ERRO] Verifique na "config.py", se há algum zero antes dum valor, e/ou se está vazia alguma variável.')
         print(f'\n<DEPURAÇÃO CPython> {e}.')
-        print('\n[NÓ FATAL] Encerrando a execução em 25 segundos...')
-        sleep(25)  # adormece ""
+        print('\n[NÓ FATAL] Encerrando a execução em 40 segundos...')
+        sleep(40)  # adormece ""
         exit() # Encerra a execução do programa
 if isinstance(minimum_accuracy, str):
     minimum_accuracy = float(minimum_accuracy) # Corrige a declaração da variável
+if isinstance(initial_year, int) and isinstance(final_year, int):
+    if final_year > initial_year:
+        initial_year, final_year = final_year, initial_year # Corrige a inversão das variáveis
 
 year, month = initial_year, initial_month # Define o começo do período de analíse
 
